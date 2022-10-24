@@ -1,17 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 16:16:29 by dlima             #+#    #+#             */
-/*   Updated: 2022/10/24 16:45:37 by dlima            ###   ########.fr       */
+/*   Created: 2022/10/24 16:44:56 by dlima             #+#    #+#             */
+/*   Updated: 2022/10/24 16:53:47 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strrchr(const char *s, int c)
 {
+	int	i;
+
+	i = ft_strlen(s) - 1;
+	while (i >= 0)
+	{
+		if (s[i] == (char) c)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_strrchr("a", 'a'));
+// }

@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 16:16:29 by dlima             #+#    #+#             */
-/*   Updated: 2022/10/24 16:45:37 by dlima            ###   ########.fr       */
+/*   Created: 2022/10/24 12:33:30 by dlima             #+#    #+#             */
+/*   Updated: 2022/10/24 12:37:50 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_toupper(int c)
 {
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }
+
+// int main()
+// {
+// 	printf("%c", ft_toupper('s'));
+// }

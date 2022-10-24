@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 16:16:29 by dlima             #+#    #+#             */
-/*   Updated: 2022/10/24 16:45:37 by dlima            ###   ########.fr       */
+/*   Created: 2022/10/24 17:07:03 by dlima             #+#    #+#             */
+/*   Updated: 2022/10/24 17:07:37 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
+
 }
