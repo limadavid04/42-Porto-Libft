@@ -1,9 +1,10 @@
 # -*- Makefile -*-
-CC=gcc
+NAME = libft
+CC=cc
 CFLAGS=-Wall -Wextra -Wall
-OBJECTS=
+OBJS=
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) -o

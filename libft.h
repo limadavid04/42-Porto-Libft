@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:31:02 by dlima             #+#    #+#             */
-/*   Updated: 2022/10/24 17:47:37 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/05 11:19:13 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void 	*ft_calloc(size_t n, size_t size);
 #endif
