@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 16:22:56 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/07 15:42:07 by dlima            ###   ########.fr       */
+/*   Created: 2022/11/05 11:46:41 by dlima             #+#    #+#             */
+/*   Updated: 2022/11/07 15:26:05 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char	*str;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == (char) c)
-			return ((char *)str + i);
-		i++;
-	}
-	return (NULL);
+	if (!s)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	ft_strlcpy(str, &s[start], len + 1);
+	return (str);
 }
+
 // int main()
 // {
-// 	printf("%s", ft_strchr("david", 'i'));
+// 	char s[0];
 
+// 	printf("%s",ft_substr(s, 0, 20));
 // }

@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:14:45 by dlima             #+#    #+#             */
-/*   Updated: 2022/10/21 16:52:07 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/07 15:13:30 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	}
 	dest[i] = '\0';
-
 	return (ft_strlen(src));
 }
 

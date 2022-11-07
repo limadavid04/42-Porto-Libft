@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 16:22:56 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/07 15:42:07 by dlima            ###   ########.fr       */
+/*   Created: 2022/11/07 14:32:13 by dlima             #+#    #+#             */
+/*   Updated: 2022/11/07 15:42:02 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == (char) c)
-			return ((char *)str + i);
-		i++;
-	}
-	return (NULL);
 }
-// int main()
-// {
-// 	printf("%s", ft_strchr("david", 'i'));
-
-// }
