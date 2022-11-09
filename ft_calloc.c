@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:41:58 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/04 20:11:40 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/09 11:29:42 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	*ft_calloc(size_t n, size_t size)
 {
 	void	*ptr;
 
+	ptr = (void *)malloc(n * size);
 	if (!ptr)
 		return (NULL);
-	ptr = (void *)malloc(n * size);
 	bzero(ptr, n);
 	return (ptr);
 }
