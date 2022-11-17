@@ -6,64 +6,61 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:14:30 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/13 18:37:14 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/14 10:18:25 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*negative_converter(int n, int digits)
+static int	get_len(int n)
 {
-	char	*str;
-	str = (char *)malloc((digits + 2) * sizeof(char));
-	if (!str)
-		return (NULL);
-	str[digits + 1] = '\0';
-	str[0] = '-';
+	int	len;
+
+	len = 0;
+	if (n < 0)
+		len++;
 	while (n / 10)
 	{
-		str[digits] = n % 10 + 48;
-		digits--;
+		len++;
 		n /= 10;
 	}
-	str[1] = n % 10 + 48;
-	return (str);
+	len++;
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		digits;
+	int		len;
 	int		nbr;
 
 	nbr = n;
-	digits = 1;
-	while (nbr / 10)
+	len = get_len(nbr);
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	if (n < 0)
+		nbr *= -1;
+	if (nbr == 0)
+		return ("0\0");
+	str[len] = '\0';
+	while (nbr != 0)
 	{
-		digits++;
+		str[len - 1] = nbr % 10 + 48;
+		len--;
 		nbr /= 10;
 	}
 	if (n < 0)
-		return (negative_converter(n * -1, digits));
-	nbr = n;
-	str = (char *)malloc((digits + 1) * sizeof(char));
-	if (!str)
-		return (NULL);
-	while (nbr / 10)
-	{
-		str[digits - 1] = nbr % 10 + 48;
-		nbr /= 10;
-		digits--;
-	}
-	str[0] = nbr % 10 + 48;
+		str[0] = '-';
 	return (str);
 }
 
 int main()
 {
-	printf("%s\n", ft_itoa(-13));
-	printf("%s\n", ft_itoa(15));
-	printf("%s\n", ft_itoa(-123));
-	printf("%s\n", ft_itoa(433974537));
-	printf("%s\n", ft_itoa(-3));
+	printf("%s\n", ft_itoa(-623));
+	printf("%s\n", ft_itoa(156));
+	printf("%s\n", ft_itoa(-0));
+	printf("%s\n", ft_itoa(1052497239));
+	// printf("%s\n", ft_itoa(-3));
+
 }
