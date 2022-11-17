@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:22:56 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/07 15:42:07 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 18:17:45 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *str, int c)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (str[i] || (char)c == '\0')
 	{
 		if (str[i] == (char) c)
 			return ((char *)str + i);

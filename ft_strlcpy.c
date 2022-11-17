@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 15:14:45 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/07 15:13:30 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 19:03:26 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,21 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	len;
 
 	i = 0;
+	len = ft_strlen(src);
 	if (!dest || !src)
 		return (0);
+	if (size == 0)
+		return (len);
 	while (i < (size - 1) && src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
-	return (ft_strlen(src));
+	return (len);
 }
 
 // int main(void)

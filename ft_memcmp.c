@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 12:29:07 by dlima             #+#    #+#             */
-/*   Updated: 2022/10/21 12:58:06 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 18:13:41 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char	*ptr_s1;
-	const char	*ptr_s2;
-	size_t		i;
+	const unsigned char	*ptr_s1;
+	const unsigned char	*ptr_s2;
+	size_t				i;
 
 	i = 0;
 	ptr_s1 = s1;
