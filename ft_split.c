@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:28:59 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/09 11:29:39 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 17:01:42 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,16 @@ char	**ft_split(char const *s, char c)
 	char	*str;
 	int		word_nbr;
 
+	if (!s)
+		return (NULL);
 	str = (char *)s;
 	word_nbr = word_count(str, c);
 	arr = (char **)malloc((word_count(str, c) + 1) * sizeof(char *));
 	if (!arr)
+	{
 		free(arr);
+		return (NULL);
+	}
 	arr[word_nbr] = '\0';
 	letter_alloc(str, c, arr);
 	word_filler(str, arr, c);

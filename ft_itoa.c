@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:14:30 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/14 10:18:25 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 17:40:50 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int main()
-{
-	printf("%s\n", ft_itoa(-623));
-	printf("%s\n", ft_itoa(156));
-	printf("%s\n", ft_itoa(-0));
-	printf("%s\n", ft_itoa(1052497239));
-	// printf("%s\n", ft_itoa(-3));
+// int main()
+// {
+// 	printf("%s\n", ft_itoa(-623));
+// 	printf("%s\n", ft_itoa(156));
+// 	printf("%s\n", ft_itoa(-0));
+// 	printf("%s\n", ft_itoa(1052497239));
+// 	// printf("%s\n", ft_itoa(-3));
 
-}
+// }

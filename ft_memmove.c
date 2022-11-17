@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:18:40 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/17 15:04:01 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 17:16:11 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,24 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const char	*ptr_src;
 	char		*ptr_dest;
-	char		*temp;
 	size_t		i;
 
 	i = 0;
 	ptr_src = src;
 	ptr_dest = dest;
-	temp = (char *)malloc(n * sizeof(char));
 	if (!src && !dest)
 		return (NULL);
 	while (i < n)
 	{
-		temp[i] = ptr_src[i];
-		ptr_dest[i] = temp[i];
+		ptr_dest[i] = ptr_src[i];
 		i++;
 	}
-	free(temp);
 	return (dest);
 }
 // int main(void)
 // {
-// 	char str1[] = "davi";
-// 	char str2[7] = "jota";
+// 	char str1[] = "david";
+// 	char str2[] = "david";
 // 	ft_memmove(str2, str1, 2);
 // 	printf("%s", str2);
 // }

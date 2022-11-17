@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:31:02 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/17 12:35:41 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/17 15:33:58 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*ft_strdup(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 int		ft_isalpha(int c);
