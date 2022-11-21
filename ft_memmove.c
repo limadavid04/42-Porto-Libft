@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:18:40 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/17 18:25:45 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/21 20:51:44 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	ptr_dest = dest;
 	if (!src && !dest)
 		return (NULL);
+	if ((size_t)(dest - src) < n)
+	{
+		i = n - 1;
+		while (n > 0)
+		{
+			ptr_dest[i] = ptr_src[i];
+			n--;
+			i--;
+		}
+		return (dest);
+	}
 	while (i < n)
 	{
 		ptr_dest[i] = ptr_src[i];
