@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:14:30 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/17 17:40:50 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/21 18:06:25 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_itoa(int n)
 	int		nbr;
 
 	nbr = n;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	len = get_len(nbr);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)

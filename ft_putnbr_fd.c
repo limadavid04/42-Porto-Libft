@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/05 11:46:41 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/21 16:56:37 by dlima            ###   ########.fr       */
+/*   Created: 2022/11/21 17:08:36 by dlima             #+#    #+#             */
+/*   Updated: 2022/11/21 17:23:00 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	ft_strlcpy(str, &s[start], len + 1);
-	return (str);
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+	}
+	else if (n < 0)
+	{
+		n *= -1;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n, fd);
+	}
+	else
+	{
+		if (n < 10)
+			ft_putchar_fd((n + 48), fd);
+		else
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putchar_fd((n % 10) + 48, fd);
+		}
+	}
 }
-
-// int main()
-// {
-// 	char s[0];
-
-// 	printf("%s",ft_substr(s, 0, 20));
-// }
