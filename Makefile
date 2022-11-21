@@ -1,8 +1,8 @@
 # # -*- Makefile -*-
 NAME = libft.a
 # NAME = libft
-CC=cc
-CFLAGS=-Wall -Wextra -Werror
+CC = cc
+CFLAGS =-Wall -Wextra -Werror
 FILES = ft_isascii  ft_memcpy  ft_strjoin  ft_strrchr\
 ft_atoi     ft_isdigit  ft_memmove  ft_strlcat ft_strtrim\
 ft_bzero   ft_isprint ft_memset   ft_strlcpy  ft_substr\
@@ -10,19 +10,18 @@ ft_calloc   ft_memccpy  ft_split    ft_strlen   ft_tolower\
 ft_isalnum  ft_memchr   ft_strchr   ft_strncmp  ft_toupper\
 ft_isalpha  ft_memcmp   ft_strdup   ft_strnstr ft_itoa ft_strmapi\
 ft_striteri ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd
-OBJS= $(FILES:=.o)
-BONUS = ft_lstnew\
+BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
+$(NAME): $(FILES:=.o)
+	ar -rc $(NAME) $(FILES:=.o)
 
-# $(NAME): $(OBJS)
-# 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-$(BONUS) : $(OBJS)
-	ar -rc $(NAME) $(OBJS) $(BONUS:=.o)
+# $(NAME): $(FILES:=.o)
+# 	$(CC) $(CFLAGS) -o $(NAME) $(FILES:=.o)
+bonus : $(FILES:=.o) $(BONUS:=.o)
+	ar -rc $(NAME) $(FILES:=.o) $(BONUS:=.o)
 clean:
-	rm -f $(OBJS)
+	rm -f $(FILES:=.o) $(BONUS:=.o)
 
 fclean: clean
 	rm -f $(NAME)
@@ -30,5 +29,5 @@ fclean: clean
 re: fclean $(NAME)
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES:=.c)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES:=.c) $(BONUS:=.c)
+	gcc -nostartfiles -shared -o libft.so $(FILES:=.o) $(BONUS:=.o)
