@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 22:04:05 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/21 22:04:34 by dlima            ###   ########.fr       */
+/*   Updated: 2022/11/22 09:35:02 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-
+	if (lst && del)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

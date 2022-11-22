@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 16:55:30 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/22 10:39:35 by dlima            ###   ########.fr       */
+/*   Created: 2022/11/22 09:36:12 by dlima             #+#    #+#             */
+/*   Updated: 2022/11/22 09:58:08 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	size_t	i;
+	t_list	*node;
+	t_list	*next_node;
 
-	i = 0;
-	while (i < n)
+	node = *lst;
+	if (lst)
 	{
-		if (!s1[i] && !s2[i])
-			return (0);
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		while (node)
+		{
+			next_node = node->next;
+			ft_lstdelone(node, del);
+			node = next_node;
+		}
+		*lst = NULL;
 	}
-	return (0);
 }
-
-// int main()
-// {
-// 	char s1[] = "dAVID";
-// 	char s2[] = "David";
-// 	printf("%d", ft_strncmp(s1, s2, 1));
-// }
