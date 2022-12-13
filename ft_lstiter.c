@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:00:13 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/22 10:05:36 by dlima            ###   ########.fr       */
+/*   Updated: 2022/12/13 19:06:27 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*node;
-
-	node = lst;
-	if (lst && f)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		while (node)
-		{
-			f(node->content);
-			node = node->next;
-		}
+		f(lst->content);
+		lst = lst->next;
 	}
 }
