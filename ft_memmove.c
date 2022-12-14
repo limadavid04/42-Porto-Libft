@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 19:18:40 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/21 20:51:44 by dlima            ###   ########.fr       */
+/*   Updated: 2022/12/13 17:50:15 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if ((size_t)(dest - src) < n)
 	{
 		i = n - 1;
-		while (n > 0)
+		while (n-- > 0)
 		{
 			ptr_dest[i] = ptr_src[i];
-			n--;
 			i--;
 		}
 		return (dest);
@@ -41,10 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// int main(void)
-// {
-// 	char str1[] = "david";
-// 	char str2[] = "david";
-// 	ft_memmove(str2, str1, 2);
-// 	printf("%s", str2);
-// }

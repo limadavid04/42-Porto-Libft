@@ -1,6 +1,5 @@
 # # -*- Makefile -*-
 NAME = libft.a
-# NAME = libft
 CC = cc
 CFLAGS =-Wall -Wextra -Werror
 FILES = ft_isascii  ft_memcpy  ft_strjoin  ft_strrchr\
@@ -18,8 +17,6 @@ all: $(NAME)
 $(NAME): $(FILES:=.o)
 	ar -rc $(NAME) $(FILES:=.o)
 
-# $(NAME): $(FILES:=.o)
-# 	$(CC) $(CFLAGS) -o $(NAME) $(FILES:=.o)
 bonus : $(FILES:=.o) $(BONUS:=.o)
 	ar -rc $(NAME) $(FILES:=.o) $(BONUS:=.o)
 clean:

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:28:59 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/17 17:01:42 by dlima            ###   ########.fr       */
+/*   Updated: 2022/12/14 16:29:04 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,20 +109,20 @@ char	**ft_split(char const *s, char c)
 		free(arr);
 		return (NULL);
 	}
-	arr[word_nbr] = '\0';
+	arr[word_nbr] = NULL;
 	letter_alloc(str, c, arr);
 	word_filler(str, arr, c);
 	return (arr);
 }
 
-// int main() {
-// 	char str[] = "david sdhjgjsdyf sadfugh susx           &7 ";
-// 	char **arr = 	ft_split(str, ' ');
+// int main()
+// {
 // 	int i = 0;
+
 // 	while (arr[i])
 // 	{
-// 		printf("%s\n", arr[i]);
+// 		printf("%s", arr[i]);
 // 		i++;
 // 	}
-// 	free(arr);
+
 // }

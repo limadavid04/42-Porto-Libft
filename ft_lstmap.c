@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:06:19 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/22 10:30:00 by dlima            ###   ########.fr       */
+/*   Updated: 2022/12/14 15:34:02 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*node;
-	t_list	**head;
+	t_list	*temp;
+	t_list	*head;
 
-	head = (t_list **)malloc(sizeof(t_list **));
-	node = lst;
-	*head = node;
-	while (node)
+	if (!lst || !f)
+		return (NULL);
+	head = NULL;
+	while (lst)
 	{
-		node = ft_lstnew(f(node));
-		if (!node)
+		temp = ft_lstnew(f(lst->content));
+		if (!temp)
 		{
-			del(node->content);
-			free(node);
+			ft_lstclear(&head, del);
+			return (NULL);
 		}
-		else
-			ft_lstadd_front(head, node);
-		node = node->next;
+		ft_lstadd_back(&head, temp);
+		lst = lst->next;
 	}
-	return (node);
+	return (head);
 }
