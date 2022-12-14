@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 17:14:30 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/21 18:06:25 by dlima            ###   ########.fr       */
+/*   Updated: 2022/12/14 12:37:54 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		nbr *= -1;
 	if (nbr == 0)
-		return ("0\0");
+		return (ft_strdup("0"));
 	str[len] = '\0';
 	while (nbr != 0)
 	{
@@ -56,13 +56,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-// int main()
-// {
-// 	printf("%s\n", ft_itoa(-623));
-// 	printf("%s\n", ft_itoa(156));
-// 	printf("%s\n", ft_itoa(-0));
-// 	printf("%s\n", ft_itoa(1052497239));
-// 	// printf("%s\n", ft_itoa(-3));
-
-// }
