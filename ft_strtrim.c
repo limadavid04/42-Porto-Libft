@@ -6,7 +6,7 @@
 /*   By: dlima <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:39:02 by dlima             #+#    #+#             */
-/*   Updated: 2022/11/17 19:27:47 by dlima            ###   ########.fr       */
+/*   Updated: 2022/12/14 12:35:25 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	}
 	if (end == 0)
-		return ("");
+		return (ft_strdup(""));
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) - char_ignored + 1));
 	str = ft_substr(s1, start, end - start + 1);
 	return (str);
 }
-// int main() {
-// 	char s1[] = "        ";
-// 	char set[3] = " ";
-
-// 	printf("%s", ft_strtrim(s1, set));
-// }

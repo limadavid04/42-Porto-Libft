@@ -6,7 +6,11 @@
 /*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:28:59 by dlima             #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/12/14 16:29:04 by dlima            ###   ########.fr       */
+=======
+/*   Updated: 2022/12/14 12:46:17 by dlima            ###   ########.fr       */
+>>>>>>> b795ede2e880a90bd39836e0a72e1eefbf8b7bfd
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +87,7 @@ static void	letter_alloc(char *str, char c, char **arr)
 		if (str[i] != c)
 		{
 			bytes = (char_nbr(&str[i], c) + 1) * sizeof(char);
-			arr[pos] = (char *)malloc(bytes);
+			arr[pos] = (char *)malloc(sizeof(char) * bytes);
 			while (str[i] != c && str[i])
 				i++;
 			pos++;
@@ -114,6 +118,7 @@ char	**ft_split(char const *s, char c)
 	word_filler(str, arr, c);
 	return (arr);
 }
+<<<<<<< HEAD
 
 // int main()
 // {
@@ -126,3 +131,5 @@ char	**ft_split(char const *s, char c)
 // 	}
 
 // }
+=======
+>>>>>>> b795ede2e880a90bd39836e0a72e1eefbf8b7bfd
