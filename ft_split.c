@@ -6,11 +6,7 @@
 /*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:28:59 by dlima             #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/12/14 16:29:04 by dlima            ###   ########.fr       */
-=======
-/*   Updated: 2022/12/14 12:46:17 by dlima            ###   ########.fr       */
->>>>>>> b795ede2e880a90bd39836e0a72e1eefbf8b7bfd
+/*   Updated: 2022/12/14 16:47:24 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +114,6 @@ char	**ft_split(char const *s, char c)
 	word_filler(str, arr, c);
 	return (arr);
 }
-<<<<<<< HEAD
 
 // int main()
 // {
@@ -131,5 +126,3 @@ char	**ft_split(char const *s, char c)
 // 	}
 
 // }
-=======
->>>>>>> b795ede2e880a90bd39836e0a72e1eefbf8b7bfd
