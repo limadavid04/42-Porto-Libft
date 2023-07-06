@@ -6,7 +6,7 @@
 /*   By: dlima <dlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:31:02 by dlima             #+#    #+#             */
-/*   Updated: 2022/12/14 16:47:04 by dlima            ###   ########.fr       */
+/*   Updated: 2023/07/06 13:14:44 by dlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include "42-Porto-get_next_line/get_next_line.h"
 
 typedef struct s_list
 {
