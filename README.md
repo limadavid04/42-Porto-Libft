@@ -1,4 +1,4 @@
-# [125/100] libft
+# [125/100] libft <img src="https://imgur.com/MbpYAc0.png" alt="c" align="right" width="65" height="65"/></h1>
 
 
 __This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus.__    
