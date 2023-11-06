@@ -6,12 +6,12 @@ __This project is your very first project as a student at 42. You will need to r
 
 
 ##  Installing and running the project:
-1. Clone && cd
+1. Clone repo
 
 ```
-git clone https://github.com/ramos21rodrigo/42porto.libft && cd 42porto.libft
+git clone https://github.com/limadavid04/42-Porto-Libft.git
 ```
-2. Run `make`
+2. `cd` into newly cloned directory and Run `make`
 ```
 make
 ```
