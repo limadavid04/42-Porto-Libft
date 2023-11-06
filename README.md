@@ -42,7 +42,14 @@ cc main.c libft.a
 
 - [x] [Libft Unit Test](https://github.com/alelievr/libft-unit-test)
 
-  
+## **Disclaimer**
+At 42, the C projects are built following rules that enforce a good coding style. Some of them are:
+
+	- No for, do while, switch, case or goto are allowed
+	- No more than 25 lines per function and 5 functions per file
+	- No assigns and declarations in the same line (unless static)
+	- No more than 5 variables in 1 function
+	... 
 ___
 ###### At  [42School](https://en.wikipedia.org/wiki/42_(school)), every project has specific rules or restrictions, and some of them must be written in accordance with the [Norm](https://github.com/42School/norminette). As a result, parts of the code could be more readable or explicit, and some used technologies could be different.
 
