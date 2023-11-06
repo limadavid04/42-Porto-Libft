@@ -13,7 +13,7 @@ git clone https://github.com/limadavid04/42-Porto-Libft.git
 ```
 2. `cd` into newly cloned directory and Run `make`
 ```
-cd 42-Porto-Libft && make
+cd 42-Porto-Libft/src && make
 ```
 
 3. Now you can compile with your newly `libft.a`
