@@ -4,7 +4,7 @@
 __This project is your very first project as a student at 42. You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus.__    \
 
 Check out the subject for further info:\
--> [Subject here](https://github.com/limadavid04/42-Porto-philosophers/blob/main/en.subject.pdf)
+-> [Subject here](https://github.com/limadavid04/42-Porto-Libft/blob/main/en.subject%20.pdf)
 
 
 ##  Installing and running the project:
